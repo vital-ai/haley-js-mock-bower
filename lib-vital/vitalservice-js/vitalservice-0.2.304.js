@@ -32,42 +32,48 @@ if(module) {
 
 VitalService = function(address, eventbusURL, successCB, errorCB, options) {
 
-	// if(typeof(module) !== 'undefined') {
+	if(typeof(module) !== 'undefined') {
 		
-	// 	if( typeof(tv4) === 'undefined' ) {
+		if( typeof(tv4) === 'undefined' ) {
 
-	// 		VITAL_JSON_SCHEMAS = [];
+			VITAL_JSON_SCHEMAS = [];
 			
-	// 		tv4 = require(__dirname + '/tv4.min.js');
+			tv4 = require(__dirname + '/tv4.min.js');
 		
-	// 		LRUCache = require(__dirname + '/lru.js').LRUCache;
+			LRUCache = require(__dirname + '/lru.js').LRUCache;
 			
-	// 		require(__dirname + '/vital-core-0.2.304.js')
-	// 		require(__dirname + '/vital-0.2.304.js')
+			require(__dirname + '/vital-core-0.2.304.js')
+			require(__dirname + '/vital-0.2.304.js')
 			
-	// 		var fs = require('fs');
+			var fs = require('fs');
 			
-	// 		var items = fs.readdirSync(__dirname + '/domains');
+			var items = fs.readdirSync(__dirname + '/domains');
 			
-	// 		for(var i = 0 ; i < items.length; i++) {
-	// 			var file = items[i];
-	// 			console.log("Loading domain file: " + file)
-	// 			require(__dirname + '/domains/' + file);
-	// 		}
+			for(var i = 0 ; i < items.length; i++) {
+				var file = items[i];
+				console.log("Loading domain file: " + file)
+				require(__dirname + '/domains/' + file);
+			}
+			
+//			require(__dirname + '/vital-nlp-0.2.304.js')
+//			require(__dirname + '/vital-social-0.2.304.js')
+//			require(__dirname + '/vital-aimp-0.1.0.js')
+//			require(__dirname + '/haley-0.1.0.js')
+//			require(__dirname + '/haley-shopping-0.1.0.js')
 					
-	// 		var import1 = require(__dirname + '/vitalservice-json-0.2.304.js');
+			var import1 = require(__dirname + '/vitalservice-json-0.2.304.js');
 			
-	// 		vitaljs = import1.vitaljs;
-	// 		VitalServiceJson = import1.VitalServiceJson;
+			vitaljs = import1.vitaljs;
+			VitalServiceJson = import1.VitalServiceJson;
 			
-	// 		var import2 = require(__dirname + '/vitalservice-impl-0.2.304.js');
+			var import2 = require(__dirname + '/vitalservice-impl-0.2.304.js');
 			
-	// 		VitalServiceWebsocketImpl = import2.VitalServiceWebsocketImpl;
-	// 		UUIDGenerator = import2.UUIDGenerator;
+			VitalServiceWebsocketImpl = import2.VitalServiceWebsocketImpl;
+			UUIDGenerator = import2.UUIDGenerator;
 
-	// 	}
+		}
 		
-	// }
+	}
 	
 	var _logger = console;
 	

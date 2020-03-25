@@ -1249,41 +1249,41 @@ HaleyAPIVitalServiceImpl.prototype.listServerDomainModels = function(callback) {
 	var domainsURL = this.saasServerURL + '/domains';
 
 	//Load the request module
-	// var request = require('request');
+	var request = require('request');
 
 	
-	// request({
-	//     url: domainsURL,
-	//     qs: {}, //Query string data
-	//     method: 'GET'
-	// }, function(error, response, body){
-	//     if(error) {
-	//     	_this.logger.error("Error when getting user profile data", error);
-	//     	callback(error, null);
-	//     } else {
-	//     	if(response.statusCode == 200) {
+	request({
+	    url: domainsURL,
+	    qs: {}, //Query string data
+	    method: 'GET'
+	}, function(error, response, body){
+	    if(error) {
+	    	_this.logger.error("Error when getting user profile data", error);
+	    	callback(error, null);
+	    } else {
+	    	if(response.statusCode == 200) {
 	    		
-	//     		_this.logger.info(response.statusCode, ( body && body.length > 100 ) ? ( body.substring(0, 97) + "...") : body);
+	    		_this.logger.info(response.statusCode, ( body && body.length > 100 ) ? ( body.substring(0, 97) + "...") : body);
 	    		
-	//     		try {
+	    		try {
 	    			
-	//     			var parsed = JSON.parse(body);
-	//     			var domainsList = [];
-	//     			for(var i = 0 ; i < parsed.length; i++) {
-	//     				var obj = parsed[i];
-	//     				domainsList.push(vitaljs.graphObject(obj));
-	//     			}
+	    			var parsed = JSON.parse(body);
+	    			var domainsList = [];
+	    			for(var i = 0 ; i < parsed.length; i++) {
+	    				var obj = parsed[i];
+	    				domainsList.push(vitaljs.graphObject(obj));
+	    			}
 	    			
-    // 				callback(null, domainsList);
+    				callback(null, domainsList);
     				
-	//     		} catch(e) {
-	//     			callback("error when parsing domains json: " + e, null);
-	//     		}
-	//     	} else {
-	//     		_this.logger.error("Error when getting domains data " + response.statusCode, body);
-	//     	}
-	//     }
-	// });
+	    		} catch(e) {
+	    			callback("error when parsing domains json: " + e, null);
+	    		}
+	    	} else {
+	    		_this.logger.error("Error when getting domains data " + response.statusCode, body);
+	    	}
+	    }
+	});
 	
 }
 
@@ -1712,9 +1712,8 @@ HaleyAPIVitalServiceImpl.prototype._uploadFileImpl = function(isBrowser, isCordo
 		
 		ft.upload(fileURL, url, win, fail, options);
 		
-	}
-	/* else {
-	
+	} else {
+		
 		var fs = require('fs');
 		
 		var request = require('request');
@@ -1783,8 +1782,8 @@ HaleyAPIVitalServiceImpl.prototype._uploadFileImpl = function(isBrowser, isCordo
 			}
 			
 		});
+		
 	}
-	*/
 	
 }
 
