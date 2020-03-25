@@ -1,0 +1,3 @@
+/conf/*.config
+/logs/
+/node_modules/

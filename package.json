@@ -1,0 +1,27 @@
+{
+  "name": "haley-js-mock-browser",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vital-ai/haley-js-mock-browser.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vital-ai/haley-js-mock-browser/issues"
+  },
+  "homepage": "https://github.com/vital-ai/haley-js-mock-browser#readme",
+  "devDependencies": {
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "browser": {
+    "module-jquery": false
+  }
+}
