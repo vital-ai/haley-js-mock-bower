@@ -2,6 +2,7 @@
 require('./lib-vital/vitalservice-js/vital-core-0.2.304');
 require('./lib-vital/vitalservice-js/vital-0.2.304');
 const HaleyAPI = require('./lib-vital/haley-js-api/haley-js-api-0.0.1');
+const HaleyWrappedAPI = require('./lib-vital/haley-js-api/haley-js-api-wrapped-0.0.1');
 const HaleyAPIVitalServiceImpl = require('./lib-vital/haley-js-api/haley-js-vitalservice-implementation-0.0.1');
 require('./lib-vital/vitalservice-js/lru');
 require('./lib-vital/vitalservice-js/sockjs-0.3.4.min');
@@ -16,6 +17,7 @@ const VitalServiceJson = require('./lib-vital/vitalservice-js/vitalservice-json-
 
 (function(windows) {
     windows.HaleyAPI = HaleyAPI;
+    windows.HaleyWrappedAPI = HaleyWrappedAPI;
     windows.VitalService = VitalService;
     windows.VitalServiceWebsocketImpl = VitalServiceWebsocketImpl;
     windows.HaleyAPIVitalServiceImpl = HaleyAPIVitalServiceImpl;
