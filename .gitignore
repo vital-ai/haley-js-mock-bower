@@ -1,3 +1,5 @@
+package-lock.json
+
 /conf/*.config
 /logs/
 /node_modules/
