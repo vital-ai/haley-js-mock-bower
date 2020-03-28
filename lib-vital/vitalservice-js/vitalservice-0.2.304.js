@@ -32,6 +32,7 @@ if(module) {
 
 VitalService = function(address, eventbusURL, successCB, errorCB, options) {
 
+	/** Browser side will load module throw script tag.
 	if(typeof(module) !== 'undefined') {
 		
 		if( typeof(tv4) === 'undefined' ) {
@@ -54,12 +55,6 @@ VitalService = function(address, eventbusURL, successCB, errorCB, options) {
 				console.log("Loading domain file: " + file)
 				require(__dirname + '/domains/' + file);
 			}
-			
-//			require(__dirname + '/vital-nlp-0.2.304.js')
-//			require(__dirname + '/vital-social-0.2.304.js')
-//			require(__dirname + '/vital-aimp-0.1.0.js')
-//			require(__dirname + '/haley-0.1.0.js')
-//			require(__dirname + '/haley-shopping-0.1.0.js')
 					
 			var import1 = require(__dirname + '/vitalservice-json-0.2.304.js');
 			
@@ -74,6 +69,7 @@ VitalService = function(address, eventbusURL, successCB, errorCB, options) {
 		}
 		
 	}
+	*/
 	
 	var _logger = console;
 	

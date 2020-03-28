@@ -9,7 +9,8 @@ module.exports = {
   },
   node: {
     fs: 'empty',
-    ['/Users/lala/Desktop/vitalAi/haley-js-mock-browser/lib-vital/vitalservice-js/domains']: 'empty',
+    tls: 'empty', 
+    net: 'empty',
     request: 'empty',
   }
 };

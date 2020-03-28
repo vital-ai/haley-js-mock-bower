@@ -1,6 +1,6 @@
 {
   "name": "haley-js-mock-browser",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,10 +18,13 @@
   },
   "homepage": "https://github.com/vital-ai/haley-js-mock-browser#readme",
   "devDependencies": {
-    "webpack": "^4.42.0",
+    "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
   "browser": {
     "module-jquery": false
+  },
+  "dependencies": {
+    "request": "^2.88.2"
   }
 }

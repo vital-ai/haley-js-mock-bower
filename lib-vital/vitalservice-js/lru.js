@@ -253,3 +253,5 @@ LRUCache.prototype.toString = function() {
 
 // Export ourselves
 if (typeof this === 'object') this.LRUCache = LRUCache;
+
+global.LRUCache = LRUCache;
