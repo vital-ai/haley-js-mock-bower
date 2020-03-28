@@ -88,14 +88,7 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {$.ajax({
-    async: false,
-    url: `${PREFIX}js/haley-mock.js`,
-    dataType: "script"
-});
-
-global.UI_DEV_MODE = true;
-
+/* WEBPACK VAR INJECTION */(function(global) {
 // require('./lib-vital/vitalservice-js/jquery.cookie-1.4.0');
 __webpack_require__(2);
 __webpack_require__(3);
@@ -105,13 +98,13 @@ const HaleyAPIVitalServiceImpl = __webpack_require__(6);
 __webpack_require__(363);
 __webpack_require__(364);
 global.tv4 = __webpack_require__(365);
-__webpack_require__(366);
-const HaleyAPIMockVitalServiceImpl = __webpack_require__(367);
-const VitalServiceMockImpl = __webpack_require__(368).VitalServiceMockImpl;
-const VitalService = __webpack_require__(369);
-const VitalServiceWebsocketImpl = __webpack_require__(370);
-const vitaljs = __webpack_require__(371).vitaljs;
-const VitalServiceJson = __webpack_require__(371).VitalServiceJson;
+global.EventBus = __webpack_require__(366);
+// const HaleyAPIMockVitalServiceImpl = require('./lib-vital/haley-js-api/haley-js-mock-implementation-0.0.1');
+// const VitalServiceMockImpl = require('./lib-vital/vitalservice-js/vitalservice-mock-impl-0.2.304').VitalServiceMockImpl;
+const VitalService = __webpack_require__(367);
+const VitalServiceWebsocketImpl = __webpack_require__(368).VitalServiceWebsocketImpl;
+const vitaljs = __webpack_require__(369).vitaljs;
+const VitalServiceJson = __webpack_require__(369).VitalServiceJson;
 
 global.HaleyAPI = HaleyAPI;
 global.HaleyWrappedAPI = HaleyWrappedAPI;
@@ -119,9 +112,9 @@ global.VitalService = VitalService;
 global.VitalServiceWebsocketImpl = VitalServiceWebsocketImpl;
 global.HaleyAPIVitalServiceImpl = HaleyAPIVitalServiceImpl;
 global.vitaljs = vitaljs;
-global.VitalServiceJson = VitalServiceJson,
-global.HaleyAPIMockVitalServiceImpl = HaleyAPIMockVitalServiceImpl;
-global.VitalServiceMockImpl = VitalServiceMockImpl;
+global.VitalServiceJson = VitalServiceJson;
+// global.HaleyAPIMockVitalServiceImpl = HaleyAPIMockVitalServiceImpl;
+// global.VitalServiceMockImpl = VitalServiceMockImpl;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(1)))
 
 /***/ }),
@@ -24676,7 +24669,7 @@ elliptic.eddsa = __webpack_require__(155);
 /* 129 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_from\":\"elliptic@^6.0.0\",\"_id\":\"elliptic@6.5.2\",\"_inBundle\":false,\"_integrity\":\"sha512-f4x70okzZbIQl/NSRLkI/+tteV/9WqL98zx+SQ69KbXxmVrmjwsNUPn/gYJJ0sHvEak24cZgHIPegRePAtA/xw==\",\"_location\":\"/elliptic\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"range\",\"registry\":true,\"raw\":\"elliptic@^6.0.0\",\"name\":\"elliptic\",\"escapedName\":\"elliptic\",\"rawSpec\":\"^6.0.0\",\"saveSpec\":null,\"fetchSpec\":\"^6.0.0\"},\"_requiredBy\":[\"/browserify-sign\",\"/create-ecdh\"],\"_resolved\":\"https://registry.npmjs.org/elliptic/-/elliptic-6.5.2.tgz\",\"_shasum\":\"05c5678d7173c049d8ca433552224a495d0e3762\",\"_spec\":\"elliptic@^6.0.0\",\"_where\":\"/Users/lala/Desktop/vitalAi/haley-js-mock-browser/node_modules/browserify-sign\",\"author\":{\"name\":\"Fedor Indutny\",\"email\":\"fedor@indutny.com\"},\"bugs\":{\"url\":\"https://github.com/indutny/elliptic/issues\"},\"bundleDependencies\":false,\"dependencies\":{\"bn.js\":\"^4.4.0\",\"brorand\":\"^1.0.1\",\"hash.js\":\"^1.0.0\",\"hmac-drbg\":\"^1.0.0\",\"inherits\":\"^2.0.1\",\"minimalistic-assert\":\"^1.0.0\",\"minimalistic-crypto-utils\":\"^1.0.0\"},\"deprecated\":false,\"description\":\"EC cryptography\",\"devDependencies\":{\"brfs\":\"^1.4.3\",\"coveralls\":\"^3.0.8\",\"grunt\":\"^1.0.4\",\"grunt-browserify\":\"^5.0.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-connect\":\"^1.0.0\",\"grunt-contrib-copy\":\"^1.0.0\",\"grunt-contrib-uglify\":\"^1.0.1\",\"grunt-mocha-istanbul\":\"^3.0.1\",\"grunt-saucelabs\":\"^9.0.1\",\"istanbul\":\"^0.4.2\",\"jscs\":\"^3.0.7\",\"jshint\":\"^2.10.3\",\"mocha\":\"^6.2.2\"},\"files\":[\"lib\"],\"homepage\":\"https://github.com/indutny/elliptic\",\"keywords\":[\"EC\",\"Elliptic\",\"curve\",\"Cryptography\"],\"license\":\"MIT\",\"main\":\"lib/elliptic.js\",\"name\":\"elliptic\",\"repository\":{\"type\":\"git\",\"url\":\"git+ssh://git@github.com/indutny/elliptic.git\"},\"scripts\":{\"jscs\":\"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js\",\"jshint\":\"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js\",\"lint\":\"npm run jscs && npm run jshint\",\"test\":\"npm run lint && npm run unit\",\"unit\":\"istanbul test _mocha --reporter=spec test/index.js\",\"version\":\"grunt dist && git add dist/\"},\"version\":\"6.5.2\"}");
+module.exports = JSON.parse("{\"_from\":\"elliptic@^6.0.0\",\"_id\":\"elliptic@6.5.2\",\"_inBundle\":false,\"_integrity\":\"sha512-f4x70okzZbIQl/NSRLkI/+tteV/9WqL98zx+SQ69KbXxmVrmjwsNUPn/gYJJ0sHvEak24cZgHIPegRePAtA/xw==\",\"_location\":\"/elliptic\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"range\",\"registry\":true,\"raw\":\"elliptic@^6.0.0\",\"name\":\"elliptic\",\"escapedName\":\"elliptic\",\"rawSpec\":\"^6.0.0\",\"saveSpec\":null,\"fetchSpec\":\"^6.0.0\"},\"_requiredBy\":[\"/browserify-sign\",\"/create-ecdh\"],\"_resolved\":\"https://registry.npmjs.org/elliptic/-/elliptic-6.5.2.tgz\",\"_shasum\":\"05c5678d7173c049d8ca433552224a495d0e3762\",\"_spec\":\"elliptic@^6.0.0\",\"_where\":\"/Users/lala/Desktop/vitalAi/haley-js-browser/node_modules/browserify-sign\",\"author\":{\"name\":\"Fedor Indutny\",\"email\":\"fedor@indutny.com\"},\"bugs\":{\"url\":\"https://github.com/indutny/elliptic/issues\"},\"bundleDependencies\":false,\"dependencies\":{\"bn.js\":\"^4.4.0\",\"brorand\":\"^1.0.1\",\"hash.js\":\"^1.0.0\",\"hmac-drbg\":\"^1.0.0\",\"inherits\":\"^2.0.1\",\"minimalistic-assert\":\"^1.0.0\",\"minimalistic-crypto-utils\":\"^1.0.0\"},\"deprecated\":false,\"description\":\"EC cryptography\",\"devDependencies\":{\"brfs\":\"^1.4.3\",\"coveralls\":\"^3.0.8\",\"grunt\":\"^1.0.4\",\"grunt-browserify\":\"^5.0.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-connect\":\"^1.0.0\",\"grunt-contrib-copy\":\"^1.0.0\",\"grunt-contrib-uglify\":\"^1.0.1\",\"grunt-mocha-istanbul\":\"^3.0.1\",\"grunt-saucelabs\":\"^9.0.1\",\"istanbul\":\"^0.4.2\",\"jscs\":\"^3.0.7\",\"jshint\":\"^2.10.3\",\"mocha\":\"^6.2.2\"},\"files\":[\"lib\"],\"homepage\":\"https://github.com/indutny/elliptic\",\"keywords\":[\"EC\",\"Elliptic\",\"curve\",\"Cryptography\"],\"license\":\"MIT\",\"main\":\"lib/elliptic.js\",\"name\":\"elliptic\",\"repository\":{\"type\":\"git\",\"url\":\"git+ssh://git@github.com/indutny/elliptic.git\"},\"scripts\":{\"jscs\":\"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js\",\"jshint\":\"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js\",\"lint\":\"npm run jscs && npm run jshint\",\"test\":\"npm run lint && npm run unit\",\"unit\":\"istanbul test _mocha --reporter=spec test/index.js\",\"version\":\"grunt dist && git add dist/\"},\"version\":\"6.5.2\"}");
 
 /***/ }),
 /* 130 */
@@ -70955,460 +70948,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
- * Extends haley api implementation with vital
- * @param vitalService
- * @returns
- */
-HaleyAPIMockVitalServiceImpl = function(vitalService) {
-	if(vitalService.impl.callFunctionHandlers == null) {
-		throw "expected mock vitalservice in order to register handlers!";
-	}
-	HaleyAPIVitalServiceImpl.call(this, vitalService);
-	
-	this.sendHandlers = {};
-	
-	var _this = this; 
-	var sendHandler = function(){
-		
-	}
-	
-	vitalService.impl.callFunctionHandlers['haley-send-message'] =  function(params){
-		return _this.onMessageSent(params.message);
-	}
-	vitalService.impl.callFunctionHandlers['haley-send-message-anonymous'] =  function(params){
-		return _this.onMessageSent(params.message);
-	}
-}
-
-HaleyAPIMockVitalServiceImpl.prototype = Object.create(HaleyAPIVitalServiceImpl.prototype);
-
-if(true) {
-	module.exports = HaleyAPIMockVitalServiceImpl;
-}
-
-HaleyAPIMockVitalServiceImpl.prototype.scheduleSend = function(msgRL) {
-	var _this = this;
-	//default 10ms
-	var timeout = msgRL.timeout != null ? msgRL.timeout : 10;
-	setTimeout(function(){
-		_this._streamHandler(msgRL);
-	}, timeout);
-	
-}
-
-HaleyAPIMockVitalServiceImpl.prototype.onMessageSent = function(msgRL){
-	
-	var _this = this;
-	
-	var keys = Object.keys(this.sendHandlers);
-	
-	var srcMsg = msgRL.first();
-	
-	var c = 0;
-	
-	for(var i = 0 ; i < keys.length; i++) {
-		var key = keys[i];
-		var res = this.sendHandlers[key](msgRL);
-		if(res != null) {
-			if(res._type == 'ai.vital.vitalservice.query.ResultList') {
-				var resMsg = res.first();
-				if( resMsg.get('requestURI') == null ) {
-					resMsg.set('requestURI', srcMsg.URI);
-				}
-				c++;
-				
-				this.scheduleSend(res);
-				
-			} else {
-				c += res.length;
-				for(var j = 0; j < res.length; j++) {
-					var resX = res[j];
-					var resMsg = resX.first();
-					if( resMsg.get('requestURI') == null ) {
-						resMsg.set('requestURI', srcMsg.URI);
-					}
-					
-					this.scheduleSend(resX);
-					
-				}
-				
-			}
-		}
-	}
-	
-	if(c == 0) {
-		console.warn("No mocked responses sent for " + msgRL.first().type, msgRL);
-	} else {
-		console.info("Sent " + c + " responses for " + msgRL.first().type, msgRL);
-	}
-	
-	
-	var rl = vitaljs.resultList();
-	rl.addResult(msgRL.first());
-	
-	return rl;
-}
-
-/**
- * Registers handler with given id
- * @param id handler ID
- * @param handlerFunction function that is called with msgRL and should return either a single or a list of messages to receive.
- * Each message can specify optional timeout after which it's sent. No timeout or <= 0 sends immediately
- * @return true if registered, false otherwise
- */
-HaleyAPIMockVitalServiceImpl.prototype.registerSendMessageHandler = function(id, handlerFunction) {
-	if(!(typeof(id) === 'string')) throw "id has to be a string: " + typeof(id);
-	if(!(typeof(handlerFunction) === 'function')) throw "handlerFunction has to be a function: " + typeof(handlerFunction);
-	if( this.sendHandlers[id] != null ) {
-		console.warn("handler already registered: " + id);
-		return false;
-	}
-	this.sendHandlers[id] = handlerFunction;
-}
-
-HaleyAPIMockVitalServiceImpl.prototype.deregisterSendMessageHandler = function(id) {
-	if( this.sendHandlers[id] != null ) {
-		delete this.sendHandlers[id];
-		return true;
-	}
-	return false;
-}
-
-/***/ }),
-/* 368 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Mock vitalservice implementation
- * @param type
- * @param successCB
- * @param errorCB
- * @param logger
- * @returns
- */
-VitalServiceMockImpl = function(type, successCB, errorCB, logger) {
-	
-	//default logger is console, but can be replaced with watson etc
-	this.logger = logger != null ? logger : console;
-	
-	this.admin = false;
-	this.superadmin = false;
-	
-	if(type == 'service') {
-		
-	} else if(type == 'admin') {
-		this.admin = true;
-	} else if(type == 'superadmin') {
-		this.superadmin = true;
-	} else {
-		this.logger.error("Unhnown type: " + type);
-		return
-	}
-	
-	
-	this.loginTypes = [
-	  'http://vital.ai/ontology/vital#Login',
-	  'http://vital.ai/ontology/vital#AdminLogin',
-	  'http://vital.ai/ontology/vital#SuperAdminLogin'
-	];
-	
-	//there's always a new session generated, it could be cached in localstorage/cookie etc
-	this.sessionID = 'mock-' + new Date().getTime();
-	
-	//obtained via authentication, appended to every request
-	this.appSessionID  = null;
-	
-	//this is returned immediately
-	this.mockLogin = null;
-	this.login = null;
-	
-	this.logger.info('sessionID: ' + this.sessionID);
-
-	this.authAppID = null; 
-	
-	this.vsJson = null;
-	
-	this.closed = false;
-	
-	this.url = "http://example.org/mocked-vitalservice-endpoint";
-	
-	if(typeof( VitalServiceJson ) != 'undefined') {
-		
-		this.logger.info("loading json validation module...");
-		
-		if(VitalServiceJson.SINGLETON != null) {
-			
-			this.logger.info("json singleton already set - reusing");
-			
-		} else {
-		
-			this.logger.info("Initializing new json singleton");
-			
-			VitalServiceJson.SINGLETON = new VitalServiceJson(this.logger, this.loggingEnabled);
-			
-		}
-		
-		this.vsJson = VitalServiceJson.SINGLETON;
-		
-		if(type == 'service') {
-			
-			vitaljs.vitalservice = this;
-			
-		}
-		
-	} else {
-		
-		this.logger.error("VitalServiceJson module not available, it's mandatory.");
-
-		return;
-	}
-	
-	
-	//
-	this.successCB = successCB;
-	this.callFunctionHandlers = {};
-	
-}
-
-VitalServiceMockImpl.prototype.connect = function(){
-	this.successCB();
-}
-
-VitalServiceMockImpl.JS_REGISTER_STREAM_HANDLER = 'js-register-stream-handler';
-
-VitalServiceMockImpl.JS_UNREGISTER_STREAM_HANDLER = 'js-unregister-stream-handler';
-
-VitalServiceMockImpl.JS_LIST_STREAM_HANDLERS = 'js-list-stream-handlers';
-
-
-VitalServiceMockImpl.VERTX_STREAM_SUBSCRIBE = 'vertx-stream-subscribe';
-
-VitalServiceMockImpl.VERTX_STREAM_UNSUBSCRIBE = 'vertx-stream-unsubscribe';
-
-VitalServiceMockImpl.DomainsManagerScript = 'commons/scripts/DomainsManagerScript';
-
-VitalServiceMockImpl.vitalauth_login = 'vitalauth.login';
-
-VitalServiceMockImpl.vitalauth_logout = 'vitalauth.logout';
-
-VitalServiceMockImpl.vitalauth_authorise = 'vitalauth.authorise';
-
-VitalServiceMockImpl.prototype.getAppSessionID = function() {
-	return this.appSessionID;
-}
-
-
-
-/**
- * Calls the service method, all input parameters are validated against json schema - same 
- */
-VitalServiceMockImpl.prototype.callMethod = function(method, args, successCB, errorCB) {
-	
-	if(this.loggingEnabled) { this.logger.debug("service call " + method + " args:", args); }
-	
-	if(typeof(successCB) != "function") {
-		this.logger.error("method: " + method + " - Success callback not a function, arguments list invalid");
-		return;
-	}
-	
-	if(typeof(errorCB) != "function") {
-		this.logger.error("method: " + method + " - Error callback not a function, arguments list invalid");
-		return;
-	}
-	
-	
-	
-	var data = {
-		method: method,
-		args: args,
-		sessionID: this.appSessionID
-	};
-	
-	var _this = this;
-	
-	var __ignoreJsonValidationErrors = false; 
-	
-	
-	var functionName = null;
-	
-	if(method == 'callFunction') {
-		
-		//determine the functionName based on params count
-		if(args.length >= 2) {
-			functionName = args[args.length - 2];
-		} else {
-			this.logger.error("method : " + method + " requires at least two arguments");
-			return
-		}
-
-		
-		if(functionName == VitalServiceMockImpl.vitalauth_login) {
-			
-			if(this.mockLogin == null) {
-				throw "mock login not set!";
-			}
-			
-			this.login = this.mockLogin;
-			this.appSessionID = 'Login-mock-' + new Date().getTime();
-			
-			var rl = vitaljs.resultList();
-			rl.addResult(this.login);
-			
-			successCB(rl);
-			return;
-			
-		}
-		
-		if(functionName == VitalServiceMockImpl.vitalauth_authorise) {
-			
-			throw "not implemented: " + functionName;
-			
-		}
-		
-		
-		if(functionName == VitalServiceMockImpl.vitalauth_logout) {
-			this.login = null;
-			this.appSessionID = null;
-			var rl = vitaljs.resultList();
-			successCB(rl);
-		}
-		
-		var handler = this.callFunctionHandlers[functionName];
-		if(handler == null) {
-			throw "No mock handler for function name: " + functionName;
-		}
-		
-		var rl = handler(args[1]);
-		
-		this.logger.info("handler for function: " + functionName + " returned", rl);
-		
-		if(rl.timeout) {
-			
-			setTimeout(function(){
-				successCB(rl);
-			}, rl.timeout);
-			
-		} else {
-			
-			successCB(rl);
-			
-		}
-		
-		
-		
-	} else {
-		throw "method not supported by mocked client: " + method;
-	}
-	
-}
-
-VitalServiceMockImpl.prototype.close = function(successCB, errorCB){
-	
-	var _this = this;
-	
-	this.closed = true;
-	
-	if(successCB != null) {
-		successCB();
-	}
-	
-	
-}
-
-VitalServiceMockImpl.prototype.listStreamHandlers = function(paramsMap, successCB, errorCB) {
-	
-	var res = vitaljs.resultList();
-	
-	successCB(res);
-	
-}
-
-VitalServiceMockImpl.prototype.registerStreamHandler = function(paramsMap, successCB, errorCB) {
-	
-	var streamName = paramsMap.streamName;
-	
-	successCB({
-		_type: 'ai.vital.vitalservice.query.ResultList',
-		status: {
-			_type: 'ai.vital.vitalservice.VitalStatus',
-			status: 'ok',
-			message: 'MOCK Handler for stream ' + streamName + ' registered successfully'
-		}
-	});
-	
-}
-
-
-
-VitalServiceMockImpl.prototype.unregisterStreamHandler = function(paramsMap, successCB, errorCB) {
-	
-	var streamName = paramsMap.streamName;
-	
-	successCB({
-		_type: 'ai.vital.vitalservice.query.ResultList',
-		status: {
-			_type: 'ai.vital.vitalservice.VitalStatus',
-			status: 'ok',
-			message: 'MOCK Handler for stream ' + streamName + ' unregistered successfully'
-		}
-	});
-	
-}
-
-VitalServiceMockImpl.prototype.streamSubscribe = function(paramsMap, successCB, errorCB) {
-	
-	var streamName = paramsMap.streamName;
-	
-	successCB({
-		_type: 'ai.vital.vitalservice.query.ResultList',
-		status: {
-			_type: 'ai.vital.vitalservice.VitalStatus',
-			status: 'ok',
-			message: 'MOCK Successfully Subscribe to stream ' + streamName
-		}
-	});
-		
-	
-}
-
-
-Object.size = function(obj) {
-    var size = 0, key;
-    for (key in obj) {
-        if (obj.hasOwnProperty(key)) size++;
-    }
-    return size;
-};
-
-VitalServiceMockImpl.prototype.streamUnsubscribe = function(paramsMap, successCB, errorCB) {
-
-	var streamName = paramsMap.streamName;
-	
-	successCB({
-		_type: 'ai.vital.vitalservice.query.ResultList',
-		status: {
-			_type: 'ai.vital.vitalservice.VitalStatus',
-			status: 'ok',
-			message: 'MOCK Successfully unsubscribe from stream ' + streamName
-		}
-	});
-	
-}
-
-
-if(true) {
-
-	module.exports = {
-		VitalServiceMockImpl: VitalServiceMockImpl
-	};
-	
-}
-
-/***/ }),
-/* 369 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
  * VitalService javascript interface
  * @param address - vitalservice eventbus address, 'vitalservice' in most cases
  * @param eventBusURL - if null then current window url protocol://host:port/eventbus will be used 
@@ -72114,7 +71653,7 @@ if(true) {
 }
 
 /***/ }),
-/* 370 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -73444,7 +72983,7 @@ if(true) {
 }
 
 /***/ }),
-/* 371 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
