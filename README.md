@@ -1,1 +1,2 @@
-# haley-js-mock-bower
+# haley-js-mock-browser
+
