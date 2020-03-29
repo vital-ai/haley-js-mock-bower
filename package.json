@@ -1,5 +1,5 @@
 {
-  "name": "haley-js-mock-browser",
+  "name": "@vital-ai/haley-js-mock-browser",
   "version": "0.0.6",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/vital-ai/haley-js-mock-browser.git"
   },
-  "author": "",
+  "author": "Marc Hadfield",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vital-ai/haley-js-mock-browser/issues"
