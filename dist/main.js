@@ -94,6 +94,15 @@
     dataType: "script"
 });
 
+VITAL_DOMAINS.forEach(file => {
+    console.log('loading domain file: ', file);
+    $.ajax({
+        async: false,
+        url: `${PREFIX}js/vitalservice/domains/${file}`,
+        dataType: "script"
+    });
+});
+
 global.UI_DEV_MODE = true;
 
 // require('./lib-vital/vitalservice-js/vital-core-0.2.304');
