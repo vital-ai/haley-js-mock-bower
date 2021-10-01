@@ -21,7 +21,7 @@ if(!fs.existsSync(DOMAINS_PATH) || !fs.lstatSync(DOMAINS_PATH).isDirectory()) {
 }
 
 const items = fs.readdirSync(DOMAINS_PATH);
-let text = 'VITAL_DOMAINS = ["' + items.join('", "') + '"];\n';
+let text = 'VITAL_DOMAINS = ["' + items.filter(s => s.endsWith('.js')).join('", "') + '"];\n';
 text += `TIME_DOMAIN_LIST_CREATED = "${new Date()}"`;
 fs.writeFile(OUTPUT_DOMAINS_PATH, text, {flag: 'w+'}, function (err) {
     if(err) {
